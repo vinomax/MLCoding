@@ -2,6 +2,9 @@ pipeline {
     agent any
 
     stages {        
+        stage('Source code checkout'){
+            git credentialsId: 'Github', url: 'https://github.com/vinomax/NewProject.git'
+        }
         stage('Build') {
             steps {
                 bat '''
