@@ -4,7 +4,7 @@ pipeline {
     stages {        
         stage('Source code checkout'){
             steps {                
-                git credentialsId: 'Github', url: 'https://github.com/vinomax/NewProject.git'
+                git branch: 'main', credentialsId: 'Github', url: 'https://github.com/vinomax/NewProject.git'
             }
         }
         stage('Build') {
